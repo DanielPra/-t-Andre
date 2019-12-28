@@ -1,0 +1,52 @@
+# Create a rock paper scissors game. V.2
+
+player_options = ("rock", "paper", "scissors")
+
+player1 = input("\nPlayer 1 what do you chooose: rock, paper or scissors? ")
+
+while player1 not in player_options:
+    print("\nYou need to input 'rock', 'paper', or 'scissors'")
+    player1 = input("\nWhat do you chooose: rock, paper or scissors? ")
+if player1 in player_options:
+    whattodo = 1
+
+player2 = input("\nPlayer 2 what do you chooose: rock, paper or scissors? ")
+
+while player2 not in player_options:
+    print("\nYou need to input 'rock', 'paper', or 'scissors'")
+    player2 = input("\nWhat do you chooose: rock, paper or scissors? ")
+if player2 in player_options:
+    whattodo = 2
+
+
+
+# Split games
+
+if player1 == player2:
+    print("\nSplit game")
+
+# player 1 win scenarios
+
+if player1 == "paper" and player2 == "rock":
+    print("\nPlayer 1 wins")
+
+if player1 == "rock" and player2 == "scissors":
+    print("\nPlayer 1 wins")
+
+if player1 == "scissors" and player2 == "paper":
+    print("\nPlayer 1 wins")
+
+# player 2 win scenarios
+
+if player1 == "rock" and player2 == "paper":
+    print("\nPlayer 2 wins")
+
+if player1 == "scissors" and player2 == "rock":
+    print("\nPlayer 2 wins")
+
+if player1 == "paper" and player2 == "scissors":
+    print("\nPlayer 2 wins")
+
+else:
+    quit()
+

@@ -1,0 +1,63 @@
+# Taget från https://www.practicepython.org/exercise/2014/03/26/08-rock-paper-scissors.html
+
+# Create a rock paper scissors game
+
+# If split game loop and start over.
+
+# Stop printing "correct input"
+
+# create def function to check for correct answer
+
+# The simplest way to accomplish this would be to put the input method in a while
+# loop. Use continue when you get bad input, and break out of the loop when
+# you're satisfied.
+
+player_options = ("rock", "paper", "scissors")
+
+player1 = input("\nWhat do you chooose: rock, paper or scissors? ")
+
+
+while player1 not in player_options: # infinite loop?
+    print("\nYou need to input 'rock', 'paper', or 'scissors'")
+    player1 = input("\nWhat do you chooose: rock, paper or scissors? ")
+if player1 in player_options:
+    print("") # replace this or go to game
+
+player2 = input("\nWhat do you chooose: rock, paper or scissors? ")
+
+while player2 not in player_options: # infinite loop?
+    print("\nYou need to input 'rock', 'paper', or 'scissors'")
+    player2 = input("\nWhat do you chooose: rock, paper or scissors? ")
+if player2 in player_options:
+    print("")
+
+
+# Split games
+
+if player1 == player2:
+    print("\nSplit game")
+
+# player 1 win scenarios
+
+if player1 == "paper" and player2 == "rock":
+    print("\nPlayer 1 wins")
+
+if player1 == "rock" and player2 == "scissors":
+    print("\nPlayer 1 wins")
+
+if player1 == "scissors" and player2 == "paper":
+    print("\nPlayer 1 wins")
+
+# player 2 win scenarios
+
+if player1 == "rock" and player2 == "paper":
+    print("\nPlayer 2 wins")
+
+if player1 == "scissors" and player2 == "rock":
+    print("\nPlayer 2 wins")
+
+if player1 == "paper" and player2 == "scissors":
+    print("\nPlayer 2 wins")
+
+else:
+    quit()

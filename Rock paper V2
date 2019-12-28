@@ -8,7 +8,7 @@ while player1 not in player_options:
     print("\nYou need to input 'rock', 'paper', or 'scissors'")
     player1 = input("\nWhat do you chooose: rock, paper or scissors? ")
 if player1 in player_options:
-    whattodo = 1
+    whattodo = 1                # Det här verkar inte så elegant
 
 player2 = input("\nPlayer 2 what do you chooose: rock, paper or scissors? ")
 

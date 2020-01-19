@@ -1,0 +1,29 @@
+
+import random
+
+attempts = 0
+user_input = 0 # Är det här en bra lösning
+
+value = random.randint(0,9)
+
+print(value)
+
+while value != user_input:
+    user_input = int(input("\nGuess a number between 0 and 9:  "))
+
+    if user_input > value:
+        print("\nGuess a lower number  ")
+        attempts += 1
+
+    elif user_input < value:
+        print("\nGuess a higher number  ")
+        attempts += 1
+
+    while user_input != value:
+        user_input = int(input("\nGuess again  "))
+        attempts += 1
+
+    else:
+        print("\nYou guessed the right number!")
+        print(attempts)
+        quit()

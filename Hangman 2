@@ -1,0 +1,15 @@
+word = "EVAPORATE"
+
+user_guess = input("Guess a letter? ")
+
+def dela(word):
+    return [char for char in word]
+
+individual = dela(word)
+
+print(individual)
+
+if user_guess in individual:
+    print("You guessed right")
+else:
+    print("You guessed wrong")

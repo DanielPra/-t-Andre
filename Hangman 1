@@ -1,0 +1,13 @@
+word = "EVAPORATE"
+
+user_guess = input("Guess a letter? ")
+
+def split(word):
+    return [char for char in word]
+
+individual = split(word)
+
+if user_guess in individual:
+    print("You guessed right")
+else:
+    print("You guessed wrong")

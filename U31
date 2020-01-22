@@ -1,0 +1,51 @@
+# Jag försöker skapa ett spel enligt uppgift 31.
+# https://www.practicepython.org/exercise/2017/01/02/31-guess-letters.html
+
+# Som det är nu så funkar spelet om man skriver in ordet som nedan. Jag vill
+# dock generera ett slumpvis utvalt ord från min ordlista. Vad gör jag för
+# fel här? Jag antar att det är pga att "eachword" är en lista och inte en sträng?
+# Om så är fallet hur gör du lättast om en en lista till en sträng. Jag prövade
+# join men det blev pannkaka av det :)
+
+
+import random
+
+pickword = random.randint(1, 200000)
+
+with open("norvigdictionary.txt", "r") as open_file:
+    dictionary = open_file.read()
+
+eachword = dictionary.split()
+
+print(f"\nRandom word of today is, {eachword[pickword]}")
+
+word = "EVA"
+
+print(type(word))
+
+stringword = str(eachword)
+
+print(type(eachword))
+
+attempts = 0
+
+correct_guesses = [] 
+
+def dela(word):
+    return [char for char in word]
+
+individual = dela(word)
+
+while True:
+    user_guess = input("\nGuess a letter? ")
+    attempts += 1
+    if user_guess in individual:
+        correct_guesses.append(user_guess)
+        print("\nYou correctly guessed a letter")
+        print(correct_guesses)
+    else:
+        print("\nYou guessed an incorrect letter")
+    if len(correct_guesses) == 3:
+        print("\nYou guessed the entire word correctly")
+        print(f"\nYou used {attempts} attempts")
+        quit()

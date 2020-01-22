@@ -15,11 +15,11 @@ pickword = random.randint(1, 200000)
 with open("norvigdictionary.txt", "r") as open_file:
     dictionary = open_file.read()
 
-eachword = dictionary.split()
+eachword = dictionary.split() # Jag vill använda "eachword" i spelet nedan
 
 print(f"\nRandom word of today is, {eachword[pickword]}")
 
-word = "EVA"
+word = "EVA" # Det här funkar men jag vill inte använda det
 
 print(type(word))
 

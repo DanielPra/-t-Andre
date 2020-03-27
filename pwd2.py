@@ -1,0 +1,27 @@
+import random
+import string
+
+list = ["cow", "elk", "deer", "pigeon", "bear"]
+
+def password(stringLength=10):
+    letters = string.ascii_letters + string.digits
+    return ''.join(random.choice(letters) for i in range(stringLength))
+    #print(password())
+
+def weak_password(stringLength=1):
+    return ''.join(random.choice(list) for i in range(stringLength))
+
+
+choice = input("\nDo you want a strong or a weak password? strong / weak: ")
+
+if choice == "strong":
+    print(password())
+if choice == "weak":
+    print(weak_password())
+else:
+    print("You need to choose 'strong' or 'weak'")
+    choice = input("\nDo you want a strong or a weak password? strong / weak: ")
+
+
+
+# varför avslutar den efter weak men inte strong?

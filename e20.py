@@ -9,7 +9,13 @@ list = [3, 4, 5, 6, 7, 9, 99, 111]
 
 #list = ["3", "4", "5", "6", "14", "44", "77", "88", "99" ]
 
+if number in list:
+    print("Correct")
+else:
+    print("Incorrect")
 
+
+"""
 length = (len(list))
 
 middle_value = length / 2
@@ -19,13 +25,10 @@ middle_value = length / 2
 print(list(middle_value))
 
 
-"""
+
 def basic_search():
     for element in list:
         if element in number:
-            print("I found the number")
+            print("I found the number")"""
             
-if number in list:
-    print("Correct")
-else:
-    print("Incorrect")"""
+

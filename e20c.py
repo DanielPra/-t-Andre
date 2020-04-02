@@ -1,3 +1,7 @@
+# Är det fine att anropa en funktion inom sig själv? Hur tar vi generellt
+# lättast info from en en funktion och stoppar in i en annan
+
+
 def split_lst(number, lst):
     length = (len(lst)) # How many numbers does the list have
     middle_value = length / 2 # Find the median

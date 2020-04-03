@@ -1,12 +1,12 @@
-Jag får bara koden från Repl att stämma för det lägsta nummret dvs 3 i det här fallet. Är det här pga av att koden inte kollar på elementet '
-som den skalar bort utan endast på det sista kvarvarande nummret?
+#Jag får bara koden från Repl att stämma för det lägsta nummret dvs 3 i det här fallet. Är det här pga av att koden inte kollar på elementet '
+#som den skalar bort utan endast på det sista kvarvarande nummret?
 
-Jag la till de här två raderna:
+#Jag la till de här två raderna:
 
-if num_int == number:
-            return("True!")
+#if num_int == number:
+#            return("True!")
             
-Hela programmet nedan. Är det en vettig lösning?
+#Hela programmet nedan. Är det en vettig lösning?
 
 
 

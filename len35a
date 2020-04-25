@@ -1,0 +1,37 @@
+# In the previous exercise we saved information about famous scientists’ names and
+# birthdays to disk. In this exercise, load that JSON file from disk, extract the
+# months of all the birthdays, and count how many scientists have a birthday in
+#  each month.
+
+#Your program should output something like:
+#{
+#	"May": 3,
+#	"November": 2,
+#	"December": 1
+#}
+
+# Vi behöver få fram månadsdelen + ta bort datumet
+# Använd strip()?
+# Funkar Counter on dictionaries. Nej bara lists
+
+import json
+from collections import Counter
+
+bdays = {"Daniel": "februari", "Andre": "juli", "Bengt": "oktober", "Berra": "mars",
+"Kenta": "september","Bosse": "juni", "Klas": "augusti", "V6": "juli", "Kossan mu":
+"december", "Johan": "juli"}
+
+convert = bdays.items()
+
+#print(convert)
+#print(type(convert))
+
+listform = list(convert.items())
+
+c = Counter(bdays)
+
+print(c)
+
+"""
+with open("bday.json", "r") as f: # Är detta "as file"?
+    info = json.load(f)

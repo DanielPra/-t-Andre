@@ -14,7 +14,7 @@ public class DaysComplete {
         numFuture = scanner.nextInt();*/
 
 
-        numToday = ask(scanner, "\nEnter number 0-6 for today's day");
+        numToday = ask(scanner, "\nEnter number 0-6 for today's day"); // Vad gör "ask"
         numFuture = ask(scanner, "\nEnter number 0-6 for the future day");
 
         CalcFuture = (numToday + numFuture) % 7;
@@ -23,10 +23,10 @@ public class DaysComplete {
 
     }
 
-    public static int ask(Scanner scanner, String query) {
+    public static int ask(Scanner scanner, String query) {  //Vad gör vi här?
         while (true) {
 			try	{
-				System.out.println(query);
+				System.out.println(query); 
 		        return scanner.nextInt();
     	    }
 		    catch(InputMismatchException e)	{

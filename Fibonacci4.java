@@ -10,7 +10,7 @@ public class Fibonacci4 {
         secondNum = 1;
         List<Integer> list = new ArrayList<Integer>();
         //List<Integer> a[] = new ArrayList<Integer>();
-        int a[]={1,2,5,6,3,2};
+        //int a[]={1,2,5,6,3,2};
 
         while (firstNum <= range)
         {

@@ -13,7 +13,7 @@ public class Fibonacci7 {
 
         System.out.print("Fibonaccital 1 - 1000: ");
 
-        while (secondNum <= range)
+        while (firstNum <= range) //ändrat från secondNum
             {
 
                 System.out.print(firstNum + ", ");
@@ -30,7 +30,7 @@ public class Fibonacci7 {
         for(int n : list) {
             if(n % 2 != 0) {
                 oddSum += n;
-                
+                //System.out.println(n);
             }
         }
         //Prints out sum of all the odd numbers

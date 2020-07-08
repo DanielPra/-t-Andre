@@ -7,6 +7,7 @@ public class GreatestNumber {
 	public static void main(String[] args) {
 		int x, y, z;
 		Scanner keyboard = new Scanner(System.in);
+		
 		System.out.println("Enter your first number ");
 		x = keyboard.nextInt();
 		
@@ -28,7 +29,7 @@ public class GreatestNumber {
 			
 		}
 		
-		else  {
+		else  {				
 			System.out.println(+ z + " (z)is the largest number");
 		}
 

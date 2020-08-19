@@ -1,4 +1,3 @@
-// TODO - Ändra variabler till cheese(x), pepperoni(x) och ham(x)
 // Varför funkar det inte att jämföra strängar med (typeToppings == "pepperoni"). Minnesposition och inte innehåll (?)
 
 import java.util.Scanner;
@@ -26,7 +25,16 @@ public class PizzaMain1 {
 		int numToppings = keyboard.nextInt();
 		keyboard.close();
 		
-		// Ändra så att vi har tre instansvariabler för fyllning som i Pizza.java
+	
+		Pizza.calcCost(pizzaSize, numToppings, typeToppings);
+		//Pizza.getDescription(pizzaSize, numToppings, typeToppings);
+		
+		
+	}
+	
+}
+
+	// Ändra så att vi har tre instansvariabler för fyllning som i Pizza.java
 		
 		/*if (typeToppings.equals("cheese")) {
 			int numCheeseToppings = numToppings;
@@ -40,10 +48,3 @@ public class PizzaMain1 {
 			//.out.println(numHamToppings);	
 		}*/
 		
-		Pizza.calcCost(pizzaSize, numToppings, typeToppings);
-		//Pizza.getDescription(pizzaSize, numToppings, typeToppings);
-		
-		
-	}
-	
-}

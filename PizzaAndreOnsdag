@@ -1,0 +1,125 @@
+import java.util.Scanner;
+import java.time.format.DateTimeFormatter;  
+import java.time.LocalDateTime;  
+
+class Pizza {
+    String pizzaSize;  
+    int numCheeseToppings;
+    int numPepperoniToppings;
+    int numHamToppings;
+    
+    public void setPizzaSize(String s) {
+        pizzaSize = s;
+    }
+    
+    public String getPizzaSize() {
+        return pizzaSize;
+    }
+    
+    public void setNumCheeseToppings(int s) {
+        numCheeseToppings = s;
+    }
+    
+    public int getNumCheeseToppings() {
+        return numCheeseToppings;
+    }
+    
+    public void setNumPepperoniToppings(int s) {
+        numPepperoniToppings = s;
+    }
+    
+    public int getNumPepperoniToppings() {
+        return numPepperoniToppings;
+    }
+    public void setNumHamToppings(int s) {
+    	numHamToppings = s;
+    }
+    public int getNumHamToppings() {
+    	return numHamToppings;
+    }
+    public static void getDescription(String x, int y, String z) {  //getDescription(pizzaSize, numToppings, typeToppings);
+		System.out.println("You picked a " + x + " pizza and " + y + " " + z + " topping(s)");
+    }
+    
+    public void calcCost() {  
+		double basePrice;
+		String size = "small";
+		String size1 = "medium";
+		int numToppings = (numCheeseToppings + numPepperoniToppings + numHamToppings);
+		if (pizzaSize.equals(size)) { 
+		    basePrice = 10 + 3 * numToppings; 
+		    System.out.println("You ordered a small pizza with " + numToppings + " topping(s). Your bill is " + basePrice + " kr");
+		}
+		else if (pizzaSize.equals(size1))  { basePrice = 15 + 2.5 * numToppings;
+		System.out.println("You ordered a medium pizza with " + numToppings + " topping(s). Your bill is " + basePrice + " kr");
+		}
+		else { basePrice = 20 + 2 * numToppings; 
+		System.out.println("You ordered a medium pizza with " + numToppings + " topping(s). Your bill is " + basePrice + " kr");
+		 
+		}
+	
+	}
+}
+
+
+/* public void addTopping (String type, int num) {
+    	String inputTop = "cheese";
+    	int numToppings = 1;
+        if (inputTop == "cheese") {
+		    setNumCheeseToppings(numToppings);
+		} else if (inputTop == "pepperoni") {
+		    setNumPepperoniToppings(numToppings)
+		} else if (inputTop == "ham") {
+		
+		}
+    }*/
+    
+    public class PizzaMain1 {
+	public static void main(String[] args) {
+		Pizza p1 = new Pizza(); // Behövs ej vid samma packet?
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+		LocalDateTime now = LocalDateTime.now();  
+		System.out.println(dtf.format(now));  
+		System.out.println("Welcome to the cafe LNU");
+		
+		System.out.println("Please enter size of your pizza [small, medium, or large]:");
+		Scanner keyboard = new Scanner(System.in);
+		String inputSize = keyboard.next();
+		String pizzaSize = inputSize.toLowerCase();
+		p1.setPizzaSize(pizzaSize);
+	
+		System.out.println("Please enter type of topping [cheese, pepperoni, ham]: pepperoni: ");
+		String inputTop = keyboard.next();
+		String typeToppings =  inputTop.toLowerCase();
+		
+		System.out.println("Please enter the number of toppings you want: ");
+		int numToppings = keyboard.nextInt();
+		keyboard.close();
+		if (typeToppings.equals("cheese")) {
+		    p1.setNumCheeseToppings(numToppings);
+		}
+		
+	
+		p1.calcCost();
+		//Pizza.getDescription(pizzaSize, numToppings, typeToppings);
+		
+		
+	}
+	
+}
+
+	// Ändra så att vi har tre instansvariabler för fyllning som i Pizza.java
+		
+		/*if (typeToppings.equals("cheese")) {
+			int numCheeseToppings = numToppings;
+			//System.out.println(numCheeseToppings);	
+		}
+		else if (typeToppings.equals("pepperoni")) {
+			int numPepperoniToppings = numToppings;
+		}
+		else if (typeToppings.equals("ham")) {
+			int numHamToppings = numToppings;
+			//.out.println(numHamToppings);	
+		}*/
+    
+    

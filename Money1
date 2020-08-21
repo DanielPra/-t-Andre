@@ -1,0 +1,27 @@
+package learn;
+
+// 1. A constructor with two parameters of type int for the dollars and cents.
+
+// 2. Another constructor with one parameter of type int for an amount of dollars. It
+// should set cents to zero.
+
+public class Money1 {
+	
+	public static int dollars; 
+	public static int cents;
+	
+	Money1(int newDollars, int newCents) {
+		dollars = newDollars;
+		cents = newCents;
+		System.out.println("You got " + dollars + " dollars and " + cents + " cents");
+	}
+	
+	Money1(int newDollar) {
+		dollars = newDollars;
+		cents = newCents;
+		System.out.println("You got " + dollars + " dollars and " + cents + " cents");
+	}
+	
+	
+}
+	

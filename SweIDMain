@@ -1,0 +1,8 @@
+class SweIDMain {
+	public static void main(String[] args) {
+		
+		SweIDmethodLoop.iscorrect("8202264159"); 	
+		
+	}
+}
+

@@ -1,0 +1,21 @@
+package learn;
+
+public class SweIDmethodLoop {
+	static void getPosition(String SweID) {
+		char ch1 = SweID.charAt(0);
+		System.out.println(ch1);
+	}
+	
+	static void iscorrect(String SweID) {  
+		for (int i = 0; i < SweID.length(); i++) {
+			
+			if (i % 2 == 0) { 
+				char num = SweID.charAt(i); 	
+				System.out.println(num); 
+				System.out.println(SweID.charAt(i)); 
+					
+			}	
+		  }	
+		}
+		
+	}

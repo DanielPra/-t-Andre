@@ -1,0 +1,60 @@
+public class SweIDMain {
+	public static void main(String[] args) {
+		assert SweIDmethodLoop.iscorrect("8202264159");
+		assert 20*5 == 100;
+	}
+}
+
+
+public class SweIDmethodLoop {
+	
+	static boolean iscorrect(String SweID) {  
+		int oddTotal = 0;
+		int evenTotal = 0;
+		int sumTotal = 0;
+		
+		assert SweID.length() == 10;
+		
+		for (int i = 0; i < SweID.length(); i++) {
+			
+			if (i % 2 == 0) { 
+				char num = SweID.charAt(i); 
+				int myInt = Character.getNumericValue(num); 
+				int doubled = myInt * 2;
+				if (doubled > 9) {
+					int digitModulo = ((doubled /10) % 10 + (doubled % 10));
+					oddTotal += digitModulo;
+				} else {
+					oddTotal += doubled;
+				}
+			}
+			else {
+				char num = SweID.charAt(i); 
+				int myInt = Character.getNumericValue(num); 
+				evenTotal += myInt;
+			} 
+			
+			
+			// Important: You must follow the code conventions provided as study material in this
+            // step. Failure in following the recommended code conventions will result in lower grades
+			
+		
+			
+			}	
+      sumTotal = oddTotal + evenTotal;
+		System.out.println("The sum of the odd ordered digits are " + oddTotal);
+		System.out.println("The sum of the odd ordered digits are " + evenTotal);
+		System.out.println("The sum of the odd AND even digits are " + sumTotal);
+		
+		if (sumTotal % 10 == 0) {
+			System.out.println("The ID number has a correct format");
+			return True;
+		
+		}
+		else {
+		    System.out.println("The ID is incorrect");
+		    return False;
+		}
+		  }	
+		}
+		

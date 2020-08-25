@@ -1,21 +1,51 @@
 package learn;
-
+	
 public class SweIDmethodLoop {
-	static void getPosition(String SweID) {
-		char ch1 = SweID.charAt(0);
-		System.out.println(ch1);
-	}
 	
 	static void iscorrect(String SweID) {  
+		int oddTotal = 0;
+		int evenTotal = 0;
+		int sumTotal = 0;
+		
 		for (int i = 0; i < SweID.length(); i++) {
 			
 			if (i % 2 == 0) { 
-				char num = SweID.charAt(i); 	
-				System.out.println(num); 
-				System.out.println(SweID.charAt(i)); 
-					
+				char num = SweID.charAt(i); 
+				int myInt = Character.getNumericValue(num); 
+				int doubled = myInt * 2;
+				if (doubled > 9) {
+					int digitModulo = ((doubled /10) % 10 + (doubled % 10));
+					oddTotal += digitModulo;
+				}
+				if (doubled < 9 ) {
+					oddTotal += doubled;
+				}
+				}
+			if (i % 2 != 0) {
+				char num = SweID.charAt(i); 
+				int myInt = Character.getNumericValue(num); 
+				evenTotal += myInt;
+				} 
+			
+			/*
+			 *  if (i % 2 == 0) { 
+		        System.out.println(SweID.charAt(i));  
+		        //int num = SweID.charAt(i); 
+		        //System.out.println(num); 
+			 */
 			}	
+		sumTotal = oddTotal + evenTotal;
+		System.out.println("The sum of the odd ordered digits are " + oddTotal);
+		System.out.println("The sum of the odd ordered digits are " + evenTotal);
+		System.out.println("The sum of the odd AND even digits are " + sumTotal);
+		
+		if (sumTotal % 10 == 0) {
+			System.out.println("The ID number has a correct format");
+		}
+		else {
+			System.out.println("The ID is incorrect");
+		}
 		  }	
 		}
 		
-	}
+	

@@ -1,0 +1,74 @@
+import java.util.Random;
+
+public class DicesMethod {
+    /*
+	static int ResTwo = 0; static int ResThree = 0; static int ResFour = 0; 
+	static int ResFive = 0; static int ResSix = 0; static int ResSeven = 0;
+	*/
+	
+	public static void main(String[] args) {
+		
+		int NumRolls = 100;
+		int[] sums = new int[11];
+		
+		for (int i = 0; i < NumRolls; i++) {
+		    // GenDice();
+			int sum = rollTwoDices();
+
+			sums[sum-2]++;
+//	sums[sum-2] += 1;
+//	sums[sum-2] = sums[sum-2] + 2;
+		}
+		/*
+		System.out.println("Frequency table (sum, count) for rolling two dices "  + NumRolls + " times is:");
+		System.out.println("2    " + ResTwo + " times");
+		System.out.println("3    " + ResThree + " times");
+		System.out.println("4    " + ResFour + " times");
+		System.out.println("5    " + ResFive + " times");
+		System.out.println("6    " + ResSix + " times");
+		System.out.println("7    " + ResSeven + " times");
+		*/
+		System.out.println("Frequency table (sum, count) for rolling two dices "  + NumRolls + " times is:");
+		for (int i = 2; i <= 12; i++) {
+		    System.out.println(i + "    " + sums[i-2] + " times");
+		}
+	}
+		
+	// static void GenDice() {
+	static int rollTwoDices() {
+		Random rand = new Random();
+		// https://www.tutorialspoint.com/java/util/random_nextint_inc_exc.htm
+		// int DiceOne = rand.nextInt((max - min) + 1) + min;
+		int d1 = rand.nextInt(6) + 1;
+		// int DiceTwo = rand.nextInt((max - min) + 1) + min;
+		int d2 = rand.nextInt(6) + 1;
+		//int DiceSum = DiceOne + DiceTwo;
+		return d1 + d2;
+		
+	/*
+		if (DiceSum == 2) {
+			ResTwo += 1;
+		}
+		if (DiceSum == 3) {
+			ResThree += 1;
+		}
+		if (DiceSum == 4) {
+			ResFour += 1;
+		}
+		if (DiceSum == 5) {
+			ResFive += 1;
+		}
+		if (DiceSum == 6) {
+			ResSix += 1;
+		}
+		if (DiceSum == 7) {
+			ResSeven += 1;
+		}
+		*/
+		
+	}
+	
+}
+
+	
+	

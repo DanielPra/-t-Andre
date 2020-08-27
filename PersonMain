@@ -1,0 +1,9 @@
+package learn;
+
+public class PersonMain {
+	public static void main(String[] args) {
+		
+		Person s2 = new PersonB("John Doe", "Main St", "myemail", "040-123456");
+		System.out.println("s2 is " + s2); 
+	}
+}

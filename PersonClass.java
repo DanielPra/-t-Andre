@@ -1,6 +1,6 @@
 class Student extends Person {  // Student is a subclass of Person
 	String classYear;
-	  public static void student() {//main(String[] args) {
+	  public static void student() {
 		  System.out.println("I'm a student class");
 	  }
 }

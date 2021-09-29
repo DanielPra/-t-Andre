@@ -29,6 +29,7 @@ def measurements_decorator(func):
     """Function decorator, used for time measurements."""
     @wraps(func)
     def wrapper(nth_nmb: int) -> tuple:
+     """
         value_container = []
         t1 = timer()
         for i in range(0, nth_nmb):
@@ -36,7 +37,7 @@ def measurements_decorator(func):
             end_ = t1 - timer()
             print(
                 f"Total execution time {func._name}: {end if end_ > 0 else 0} ms"
-                )
+                )"""
 
     return wrapper
     #Pseudo Code for wrapper

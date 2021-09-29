@@ -1,10 +1,5 @@
 #!/usr/bin/env python
 
-""" DT179G - LAB ASSIGNMENT 3
-You find the description for the assignment in Moodle, where each detail regarding requirements
-are stated. Below you find the inherent code, some of which fully defined. You add implementation
-for those functions which are needed:
-
  - create_logger()
  - measurements_decorator(..)
  - fibonacci_memory(..)
